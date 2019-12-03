@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "keywords.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 int is_whitespace(char c){
@@ -73,13 +74,14 @@ int main(int argc, char *argv[]) {
 	
 	
 	
-	//word
+	//word reading & analysis
 	
 	while (fget_word(fp, word) !=0)
 	{
-		printf("%s\n",word);
+		copy_word(word);
 	}
-	
+	//output
+	print_word();
 	fclose(fp);
 	return 0; 
 }
